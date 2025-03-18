@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Cakeryy</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.getElementById("checkoutButton").addEventListener("click", function() {
+            // Redirect to the checkout page
+            window.location.href = "checkout.html"; // Change to your checkout page URL
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Cakeryy<span>.</span></a>
+    </header>
+
+    <section class="cart">
+        <h1 class="heading">Your Cart<span></span></h1>
+        <div class="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be added dynamically -->
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <h2>Total: <span id="total-price">0/-</span></h2>
+                <button id="checkout-btn" class="btn">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+    <button id="checkoutButton">Checkout</button>
+</body>
+</html>
+
