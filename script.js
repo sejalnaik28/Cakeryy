@@ -1,4 +1,39 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let name=document.getElementsByClassName('about')[0]
+console.log('name sejal',name);
+let referenceSection = document.getElementById("about"); // Target existing section
+
+let newSection1 = `
+  <div class="cake-section section-p1">
+    <h3>Freshly Baked Cakes</h3>
+    <div></div>
+    <p>Indulge in our freshly baked cakes made with love and the finest ingredients.</p>
+    <button class="btn">Explore Now</button>
+  </div>
+`;
+
+
+referenceSection.insertAdjacentHTML("beforebegin", newSection1); // Insert before the about section
+
+let reviewSection = document.getElementById("review"); // Get the review section
+
+let cakeSection = `
+  <div class="cake-commitment">
+    <div class="cake-image">
+      <img src="images/offer.jpg" alt="Offer on cake">
+    </div>
+    <div class="cake-text">
+      <h3>Join Our Exclusive Cake Club!</h3>
+      <p>Become a member of our Cake Lovers Club and enjoy exclusive benefits, discounts, and early access to new flavors!</p>
+      <p>Sign up today and indulge in sweet surprises every month.</p>
+    </div>
+  </div>
+`;
+
+// Insert the new section BEFORE the review section
+reviewSection.insertAdjacentHTML("beforebegin", cakeSection);
+
+
 
 // Function to add item to cart
 function addToCart(event) {
@@ -72,9 +107,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     }
 });
 
-
-//Login validation and logic
-
+// Login validation and logic
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("login-form");
     const registerForm = document.getElementById("register-form");
@@ -113,6 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         alert("Login successful!");
     });
-});
 
+   
+    
+    
+});
 
