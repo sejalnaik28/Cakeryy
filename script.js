@@ -33,6 +33,10 @@ let cakeSection = `
 // Insert the new section BEFORE the review section
 reviewSection.insertAdjacentHTML("beforebegin", cakeSection);
 
+if (navigator.globalPrivacyControl === true) {
+  // GPC is enabled — act accordingly
+  console.log("GPC signal detected. Disabling data sharing features.");
+}
 
 
 // Function to add item to cart
