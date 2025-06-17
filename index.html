@@ -63,6 +63,19 @@
             })();
         </script>
 
+      
+
+  
+
+  <script>
+    if (navigator.globalPrivacyControl === true) {
+      console.log("✅ GPC is ON — user opted out.");
+      window.GPCOptOut = true;
+    } else {
+      console.log("❌ GPC not set — proceed normally.");
+      window.GPCOptOut = false;
+    }
+  </script>
 
 
     <header>
